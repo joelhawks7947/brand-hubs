@@ -1,0 +1,186 @@
+<div class="hub">
+<header class="hero on-dark">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Brand hub &middot; Working draft</div>
+      <h1>Illawarra Hawks Foundation</h1>
+      <p>One place to get the Foundation's logo, colours and type right. Pick a logo colourway, check a colour pairing, then make a post that cannot go off brand.</p>
+      <div class="status"><a class="btn onred" href="#studio">Make a post</a></div>
+      <div class="status">
+        <span>Logo files are placeholders</span>
+      </div>
+    </div>
+    <div class="seal mark" id="heroSeal" role="img" aria-label="Illawarra Hawks Foundation seal"></div>
+  </div>
+</header>
+
+<nav class="top" aria-label="Sections"><div class="wrap">
+  <a href="#start">Start here</a><a href="#logos">Logos</a><a href="#colour">Colour</a><a href="#pairings">Pairings</a><a href="#type">Type</a><a href="#studio">Studio</a>
+</div></nav>
+
+<section id="start"><div class="wrap">
+  <div class="head">
+    <div class="eyebrow">Start here</div>
+    <h2>Five rules that cover most decisions</h2>
+  </div>
+  <ol class="rules">
+    <li><div><b>Crimson leads. Navy supports.</b>Classic Crimson is the colour people should remember. Oxford Navy carries body text, footers and formal documents.</div></li>
+    <li><div><b>Give it room.</b>White and Parchment Cream should cover most of any layout, so the crimson has something to stand against.</div></li>
+    <li><div><b>Crimson and Parchment only meet at heading size.</b>That applies both ways round: crimson text on Parchment, and Parchment text on crimson. For small text on crimson, use White.</div></li>
+    <li><div><b>Libre Baskerville for titles. Open Sans for everything else.</b>The serif is for titles, headings, quotes and captions. Body copy, labels and buttons are Open Sans.</div></li>
+    <li><div><b>Use the logo as supplied.</b>Choose a colourway from this page. Do not recolour, stretch, outline or redraw it.</div></li>
+  </ol>
+</div></section>
+
+<section id="logos" class="band-grey"><div class="wrap">
+  <div class="head">
+    <div class="eyebrow">Logos</div>
+    <h2>Four marks and their colourways</h2>
+    <p>Click a dot to see the mark in that colourway. Every colourway offered here measures at least 3:1 between mark and background.</p>
+  </div>
+  <div class="logos" id="logoGrid"></div>
+  <p class="small muted" style="margin-top:var(--s5)" id="dlNote">Downloads are 800&nbsp;px placeholders lifted from the draft PDF. They are good enough for a mock-up and not for print. SVG downloads switch on when the vector files arrive.</p>
+
+  <div class="sub"><h3>Which file do I use?</h3></div>
+  <div class="three">
+    <div><b>PNG</b><span class="small">Social posts, slides, Word documents, email. Use the transparent version over a brand colour.</span></div>
+    <div><b>SVG</b><span class="small">Websites, signage, anything printed or scaled up. It stays sharp at any size.</span></div>
+    <div class="never"><b>Never</b><span class="small">A screenshot, a copy from the website, or a logo pulled out of a PDF. That is what these placeholders are, which is why they must be replaced.</span></div>
+  </div>
+
+  <div class="sub"><h3>Room and size</h3><p class="small">The draft sets no clear space or minimum size. They should be rechecked once the vector artwork arrives.</p></div>
+  <div class="three">
+    <div><b>Clear space</b><span class="small">Keep a margin on every side equal to the height of the letters in FOUNDATION. For the seal, use a quarter of its diameter.</span></div>
+    <div><b>Minimum size</b><span class="small">Seal: 96&nbsp;px on screen, 25&nbsp;mm in print, so the ring text stays readable. Wordmark: 160&nbsp;px or 40&nbsp;mm wide.</span></div>
+    <div><b>Too small for the seal?</b><span class="small">Use the hawk on its own, as in a browser tab icon or an app avatar at small sizes.</span></div>
+  </div>
+</div></section>
+
+<section id="colour"><div class="wrap">
+  <div class="head">
+    <div class="eyebrow">Colour</div>
+    <h2>Five colours</h2>
+    <p>Values are taken from the draft. Click a swatch to copy its HEX code.</p>
+  </div>
+  <div class="swatches" id="swatches"></div>
+  <p class="small muted" style="margin-top:var(--s4)">Check the Oxford Navy CMYK with your printer before a print run. 70&nbsp;/&nbsp;37&nbsp;/&nbsp;0&nbsp;/&nbsp;71 is what a direct screen-to-print conversion of the RGB value gives, and a press-ready navy is usually specified by the printer or from a swatch book.</p>
+
+  <div class="sub"><h3>How much of each</h3><p class="small">A guide for a typical layout, following the decision that crimson leads.</p></div>
+  <div class="bar" id="bar" role="img" aria-label="Suggested colour proportions"></div>
+  <div class="barkey" id="barkey"></div>
+</div></section>
+
+<section id="pairings" class="band-parchment"><div class="wrap">
+  <div class="head">
+    <div class="eyebrow">Pairings</div>
+    <h2>Check a pairing before you use it</h2>
+    <p>Pick a background and a text size. The result is calculated from the colour values using the WCAG 2 contrast formula: 4.5:1 or better for paragraph text, 3:1 or better for heading-sized text (24&nbsp;px and up, or 19&nbsp;px bold).</p>
+  </div>
+  <div class="picker">
+    <div class="seg" id="bgSeg" role="group" aria-label="Background"><span>Background</span></div>
+    <div class="seg" id="sizeSeg" role="group" aria-label="Text size"><span>Text size</span>
+      <button type="button" data-size="p" aria-pressed="true">Paragraph</button>
+      <button type="button" data-size="h" aria-pressed="false">Heading</button>
+    </div>
+  </div>
+  <div class="pairs" id="pairs" aria-live="polite"></div>
+  <div class="note" id="pairNote"></div>
+  <p class="small" style="margin-top:var(--s4)">Light Grey is a background colour only, so it is not offered as a text colour.</p>
+</div></section>
+
+<section id="type"><div class="wrap">
+  <div class="head">
+    <div class="eyebrow">Type</div>
+    <h2>Two typefaces, eight roles</h2>
+  </div>
+  <div class="fonts">
+    <div>
+      <div class="aa" style="font-family:var(--serif)">Aa</div>
+      <h3>Libre Baskerville</h3>
+      <p class="small">Primary. Titles, headings, quotes, captions and the logo signature. It projects tradition, authority and philanthropic credibility.</p>
+      <p class="small muted">Email and Office fallback: Georgia</p>
+    </div>
+    <div>
+      <div class="aa" style="font-family:var(--sans)">Aa</div>
+      <h3>Open Sans</h3>
+      <p class="small">Secondary. Body copy, subtitles, section headers, labels and buttons. Chosen for readability across reports and web.</p>
+      <p class="small muted">Email and Office fallback: Arial</p>
+    </div>
+  </div>
+
+  <div class="sub"><h3>Hierarchy</h3><p class="small">Sizes and faces are as they appear in the draft, where every row was still labelled "Font Name". Pixel sizes and line heights are added here.</p></div>
+  <div class="tester">
+    <label for="tt" class="small"><b>Try your own words</b></label>
+    <input id="tt" type="text" value="Stronger, healthier, more connected communities" maxlength="90">
+  </div>
+  <div class="scale" id="scale"></div>
+  <p class="small muted" style="margin-top:var(--s4)">Subheading and Body share a size in the draft and differ only in weight. That works in a document. On the web, Subheading may need to go up to 18&nbsp;px to read as a heading.</p>
+</div></section>
+
+<section id="studio" class="band-grey"><div class="wrap">
+  <div class="head">
+    <div class="eyebrow">Studio</div>
+    <h2>Make a post</h2>
+    <p>Type your words, pick a layout, then adjust it. The studio only offers colours that pass the checks on this page, keeps text off photos, and shrinks the big line to fit. If something cannot be made on brand, it tells you why.</p>
+  </div>
+  <div class="studio">
+    <div class="st-form">
+      <div class="fld"><span class="lab">Shape</span><div class="ctl" id="stFmt"></div></div>
+      <div class="fld"><span class="lab">Background colour</span><div class="ctl" id="stBg"></div></div>
+      <p class="small muted">The words below are an example. Replace them with your own.</p>
+      <div class="fld"><label for="stSmall">Small line on top (optional)</label>
+        <input id="stSmall" type="text" maxlength="40" value="Our mission">
+        <div class="ctl edit-only" data-col="small" hidden></div></div>
+      <div class="fld"><label for="stBig">Big line</label>
+        <textarea id="stBig" rows="2" maxlength="90">Investing in people, programs and places</textarea>
+        <div class="ctl edit-only" id="stSize" hidden><span class="cap">Size</span>
+          <button type="button" class="pill" data-size="l">Large</button><button type="button" class="pill" data-size="m">Medium</button><button type="button" class="pill" data-size="s">Small</button></div>
+        <div class="ctl edit-only" data-col="big" hidden></div></div>
+      <div class="fld"><label for="stDetails">Details (optional)</label>
+        <textarea id="stDetails" rows="3" maxlength="170">Supporting grassroots participation and better facilities across the Illawarra.</textarea>
+        <div class="ctl edit-only" data-col="details" hidden></div></div>
+      <div class="fld"><label for="stCta">Call to action or web address (optional)</label>
+        <input id="stCta" type="text" maxlength="48" value="illawarrahawksfoundation.org.au">
+        <div class="ctl edit-only" data-col="cta" hidden></div></div>
+      <div class="fld"><label for="stPhoto">Photo (optional)</label>
+        <input id="stPhoto" type="file" accept="image/*">
+        <span class="hint">Adds photo layouts. The photo stays in your browser and is not uploaded anywhere.</span>
+        <div class="ctl"><button type="button" class="pill" id="stPhotoX" hidden>Remove photo</button></div>
+        <div id="stPhotoOpt" hidden style="display:grid;gap:8px">
+          <div class="ctl" id="stStyle"><span class="cap">Style</span><button type="button" class="pill" data-style="natural" aria-pressed="true">Natural</button><button type="button" class="pill" data-style="duo" aria-pressed="false">Navy duotone</button></div>
+          <label for="stCaption" class="hint">Caption for the framed photo layout (optional)</label>
+          <input id="stCaption" type="text" maxlength="60" value="">
+        </div>
+        <div id="stPhotoCtl" hidden>
+          <span class="hint">Drag the photo in the preview to choose what shows. Double-click it to reset.</span>
+          <label for="stZoom" class="hint">Zoom</label><input id="stZoom" type="range" min="1" max="3" step="0.01" value="1">
+          <label for="stPx" class="hint">Move left and right</label><input id="stPx" type="range" min="-1" max="1" step="0.01" value="0">
+          <label for="stPy" class="hint">Move up and down</label><input id="stPy" type="range" min="-1" max="1" step="0.01" value="0">
+        </div></div>
+      <div class="look edit-only" id="stLook" hidden>
+        <div class="fld" id="stBandFld"><span class="lab">Band colour</span><div class="ctl" id="stBand"></div></div>
+        <div class="fld"><span class="lab">Logo</span><div class="ctl" id="stLogoVar"></div><div class="ctl" id="stLogoWay"></div></div>
+      </div>
+    </div>
+    <div class="st-main">
+      <div id="stChoose">
+        <div class="st-bar" style="margin-bottom:var(--s3)"><h3>Pick a layout</h3><button type="button" class="btn secondary" id="stShuffle">Shuffle the colours</button></div>
+        <div class="tiles" id="stTiles"></div>
+      </div>
+      <div id="stEdit" hidden>
+        <div class="st-bar" style="margin-bottom:var(--s3)">
+          <button type="button" class="btn secondary" id="stBack">Back to layouts</button>
+          <span class="grow"></span>
+          <span class="badge y" id="stBadge" role="status">On brand</span>
+          <button type="button" class="btn primary" id="stDl" data-dl="1" hidden>Download PNG</button>
+        </div>
+        <div class="st-stage" id="stStage"><canvas id="stCanvas" width="1080" height="1080" style="aspect-ratio:1" role="img" aria-label="Post preview"></canvas><div id="stGrab" hidden tabindex="0" role="group" aria-label="Photo position. Drag to move the photo, or use the arrow keys. Plus and minus zoom."><span id="stGrabTip">Drag to position</span></div></div>
+        <ul class="issues" id="stIssues" hidden></ul>
+                <p class="small muted" style="margin-top:var(--s3)">Saves as a <span id="stFmtNote">1080 by 1080</span> pixel PNG. Crossed-out colours fail the contrast check for that text on that background, so they cannot be chosen.</p>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<div id="toast" hidden role="status"></div>
+</div>

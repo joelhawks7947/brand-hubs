@@ -1,0 +1,6 @@
+{
+  "name": "Illawarra Hawks Foundation",
+  "mountId": "ihf-brand-hub",
+  "fonts": "https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@400;600;700&display=swap",
+  "output": "brand-hub.js"
+}

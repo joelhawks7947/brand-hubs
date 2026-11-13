@@ -1,0 +1,16 @@
+{
+  "name": "brand-hubs",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Interactive brand hubs: one engine, one folder per brand. Served to host sites as an embed script via jsDelivr.",
+  "type": "module",
+  "scripts": {
+    "build": "npm run build:foundation",
+    "build:foundation": "node engine/build.mjs foundation"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joelhawks7947/brand-hubs.git"
+  },
+  "license": "UNLICENSED"
+}
