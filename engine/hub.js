@@ -15,6 +15,23 @@ async function copy(text,label){
   }
 }
 
+/* Logos arrive as vector paths. Build the SVG for a mark in the given colours (used for the
+   SVG download), and from the same paths a black-only SVG for each layer, used as a mask. */
+function svgOf(L,fills){
+  let body="";
+  for(const k of ["a","b"]){
+    const lay=L.paths[k]; if(!lay||!fills[k]) continue;
+    if(lay.d) body+=`<path d="${lay.d}" fill="${fills[k]}"/>`;
+    (lay.s||[]).forEach(s=>body+=`<path d="${s.d}" fill="none" stroke="${fills[k]}" stroke-width="${s.w}"/>`);
+  }
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${L.vb[0]} ${L.vb[1]}" width="${L.w}" height="${L.h}">${body}</svg>`;
+}
+for(const k in LOGOS){
+  const L=LOGOS[k];L.paths={a:L.a,b:L.b};
+  L.a="data:image/svg+xml;base64,"+btoa(svgOf(L,{a:"#000"}));
+  L.b=L.paths.b?"data:image/svg+xml;base64,"+btoa(svgOf(L,{b:"#000"})):undefined;
+}
+
 /* mask classes for the logo layers */
 (function(){
   let css="";
@@ -52,8 +69,8 @@ VARIANTS.forEach(v=>{
   const way=el("div",{class:"way"});
   const btns=el("div",{class:"btns"});
   const png=el("button",{type:"button",class:"btn primary"},"Download PNG");
-  const svg=el("button",{type:"button",class:"btn secondary",disabled:"",title:"Waiting on vector files"},"SVG: awaiting files");
-  png.dataset.dl="1"; png.hidden=true;
+  const svg=el("button",{type:"button",class:"btn secondary"},"Download SVG");
+  png.dataset.dl="1"; png.hidden=true; svg.dataset.dl="1"; svg.hidden=true;
   btns.append(png,svg);
   let cur=v.ways[0];
   function pick(w,btn){
@@ -75,7 +92,18 @@ VARIANTS.forEach(v=>{
     if(!downloads) return;
     try{
       const blob=await renderPng(v.id,cur[1],v.id==="seal"?cur[2]:null);
-      await downloads.save({filename:waySlug(v,cur)+"-placeholder.png",data:blob});
+      await downloads.save({filename:waySlug(v,cur)+".png",data:blob});
+      toast("Download started");
+    }catch(e){
+      if(e&&e.code==="declined") return;
+      toast(e&&e.code==="rate_limited"?"Finish the open save prompt first":"Download is not available in this view");
+    }
+  });
+  svg.addEventListener("click",async()=>{
+    if(!downloads) return;
+    try{
+      const fills={a:C[cur[1]].hex};if(v.id==="seal")fills.b=C[cur[2]].hex;
+      await downloads.save({filename:waySlug(v,cur)+".svg",data:new Blob([svgOf(LOGOS[v.id],fills)],{type:"image/svg+xml"})});
       toast("Download started");
     }catch(e){
       if(e&&e.code==="declined") return;

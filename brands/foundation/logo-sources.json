@@ -1,0 +1,7 @@
+{
+  "lockup":   { "file": "Horizontal/Illawarra Hawks Foundation - Horizontal_LightBG.eps", "width": 2400 },
+  "wordmark": { "file": "Wordmark/Illawarra Hawks Foundation - Wordmark_LightBG.eps",     "width": 2400 },
+  "stacked":  { "file": "Vertical/Illawarra Hawks Foundation - Vertical_LightBG.eps",     "height": 2000 },
+  "hawk":     { "file": "Icon/Illawarra Hawks Foundation - Icon_LightBG.eps",             "height": 2000 },
+  "seal":     { "file": "Illawarra Hawks Foundation - Seal.eps",                          "height": 2000 }
+}
